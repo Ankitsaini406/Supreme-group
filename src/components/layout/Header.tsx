@@ -34,7 +34,7 @@ export default function Header() {
                     animate={{ y: 0 }}
                     exit={{ y: -100 }}
                     transition={{ duration: 0.3 }}
-                    className="fixed top-0 left-0 w-full bg-foreground text-background p-5 shadow-md z-50"
+                    className="fixed top-0 left-0 w-full bg-foreground text-background p-3 shadow-md z-50"
                 >
                     <header className="flex justify-between items-center container mx-auto">
                         <div className='relative h-12 w-[150px]'>
