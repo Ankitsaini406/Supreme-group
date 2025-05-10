@@ -1,7 +1,7 @@
 
 export default function ContactUs() {
     return (
-        <div className="bg-accent p-12">
+        <div className="bg-accent py-20 px-5">
             <div className="max-w-[1020px] w-full mx-auto">
                 <div className="grid grid-cols-1 gap-y-10 md:grid-cols-2">
 
@@ -31,32 +31,32 @@ export default function ContactUs() {
                     </div>
 
                     {/* Form */}
-                    <div className="mx-auto w-full flex flex-col 2xl:gap-9 gap-4">
+                    <div className="mx-auto w-full flex flex-col items-start 2xl:gap-9 gap-4">
                         <input
-                            className="bg-transparent text-foreground placeholder:opacity-90 transition-all duration-200 tracking-wide ease-in-out border-b-2 border-foreground/40 focus:border-foreground focus:outline-none focus:ring-0 focus-visible:outline-none w-full py-2 pr-2 text-base lg:text-lg placeholder:text-foreground font-normal"
+                            className="bg-accent text-foreground placeholder:opacity-90 transition-all duration-200 tracking-wide ease-in-out border-b-2 border-foreground/40 focus:border-foreground focus:outline-none focus:ring-0 focus-visible:outline-none w-full py-2 pr-2 text-base lg:text-lg placeholder:text-foreground font-normal"
                             placeholder="Full Name"
                             name="name"
                         />
 
                         <input
-                            className="bg-transparent text-foreground placeholder:opacity-90 transition-all duration-200 tracking-wide ease-in-out border-b-2 border-foreground/40 focus:border-foreground focus:outline-none focus:ring-0 focus-visible:outline-none w-full py-2 pr-2 text-base lg:text-lg placeholder:text-foreground font-normal"
+                            className="bg-accent text-foreground placeholder:opacity-90 transition-all duration-200 tracking-wide ease-in-out border-b-2 border-foreground/40 focus:border-foreground focus:outline-none focus:ring-0 focus-visible:outline-none w-full py-2 pr-2 text-base lg:text-lg placeholder:text-foreground font-normal"
                             placeholder="E-mail"
                             name="email"
                         />
 
                         <input
-                            className="bg-transparent text-foreground placeholder:opacity-90 transition-all duration-200 tracking-wide ease-in-out border-b-2 border-foreground/40 focus:border-foreground focus:outline-none focus:ring-0 focus-visible:outline-none w-full py-2 pr-2 text-base lg:text-lg placeholder:text-foreground font-normal"
+                            className="bg-accent text-foreground placeholder:opacity-90 transition-all duration-200 tracking-wide ease-in-out border-b-2 border-foreground/40 focus:border-foreground focus:outline-none focus:ring-0 focus-visible:outline-none w-full py-2 pr-2 text-base lg:text-lg placeholder:text-foreground font-normal"
                             placeholder="Subject"
                             name="subject"
                         />
 
                         <input
-                            className="bg-transparent text-foreground placeholder:opacity-90 transition-all duration-200 tracking-wide ease-in-out border-b-2 border-foreground/40 focus:border-foreground focus:outline-none focus:ring-0 focus-visible:outline-none w-full py-2 pr-2 text-base lg:text-lg placeholder:text-foreground font-normal"
+                            className="bg-accent text-foreground placeholder:opacity-90 transition-all duration-200 tracking-wide ease-in-out border-b-2 border-foreground/40 focus:border-foreground focus:outline-none focus:ring-0 focus-visible:outline-none w-full py-2 pr-2 text-base lg:text-lg placeholder:text-foreground font-normal"
                             placeholder="Message"
                             name="message"
                         />
 
-                        <button type="submit" className="bg-foreground text-background p-5 rounded-4xl w-40">Send</button>
+                        <button type="submit" className="bg-foreground text-background py-2 px-10 rounded-4xl border border-accent hover:bg-accent hover:border-foreground hover:text-foreground duration-500 cursor-pointer">Send</button>
                     </div>
                 </div>
             </div>
