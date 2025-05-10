@@ -1,0 +1,65 @@
+
+export default function ContactUs() {
+    return (
+        <div className="bg-accent p-12">
+            <div className="max-w-[1020px] w-full mx-auto">
+                <div className="grid grid-cols-1 gap-y-10 md:grid-cols-2">
+
+                    {/* Address */}
+                    <div>
+                        <h3 className="text-2xl lg:text-[28px] 2xl:text-4xl md:leading-snug lg:leading-snug 2xl:leading-snug font-semibold">Get in touch</h3>
+                        <div className="h-[3px] w-12 bg-foreground my-4 md:my-5 lg:my-6 2xl:my-8"></div>
+
+                        <p className="font-normal text-base md:text-lg 2xl:text-2xl">For general enquiries</p>
+
+                        <div className="flex flex-col items-start gap-3 md:gap-5 2xl:gap-7 pt-5 md:pt-7 2xl:pt-8">
+                            <div>
+                                <h5 className="font-medium text-lg md:text-lg xl:text-xl">Address :</h5>
+                                <h6 className="font-normal opacity-90 text-sm md:text-base 2xl:text-xl">110, 16th Road, Chembur, Mumbai - 400071</h6>
+                            </div>
+
+                            <div>
+                                <h5 className="font-medium text-lg md:text-lg xl:text-xl">Phone :</h5>
+                                <h6 className="font-normal opacity-90 text-sm md:text-base 2xl:text-xl">+91 22 25208822</h6>
+                            </div>
+
+                            <div>
+                                <h5 className="font-medium text-lg md:text-lg xl:text-xl">Email :</h5>
+                                <h6 className="font-normal opacity-90 text-sm md:text-base 2xl:text-xl">info@supremegroup.co.in</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Form */}
+                    <div className="mx-auto w-full flex flex-col 2xl:gap-9 gap-4">
+                        <input
+                            className="bg-transparent text-foreground placeholder:opacity-90 transition-all duration-200 tracking-wide ease-in-out border-b-2 border-foreground/40 focus:border-foreground focus:outline-none focus:ring-0 focus-visible:outline-none w-full py-2 pr-2 text-base lg:text-lg placeholder:text-foreground font-normal"
+                            placeholder="Full Name"
+                            name="name"
+                        />
+
+                        <input
+                            className="bg-transparent text-foreground placeholder:opacity-90 transition-all duration-200 tracking-wide ease-in-out border-b-2 border-foreground/40 focus:border-foreground focus:outline-none focus:ring-0 focus-visible:outline-none w-full py-2 pr-2 text-base lg:text-lg placeholder:text-foreground font-normal"
+                            placeholder="E-mail"
+                            name="email"
+                        />
+
+                        <input
+                            className="bg-transparent text-foreground placeholder:opacity-90 transition-all duration-200 tracking-wide ease-in-out border-b-2 border-foreground/40 focus:border-foreground focus:outline-none focus:ring-0 focus-visible:outline-none w-full py-2 pr-2 text-base lg:text-lg placeholder:text-foreground font-normal"
+                            placeholder="Subject"
+                            name="subject"
+                        />
+
+                        <input
+                            className="bg-transparent text-foreground placeholder:opacity-90 transition-all duration-200 tracking-wide ease-in-out border-b-2 border-foreground/40 focus:border-foreground focus:outline-none focus:ring-0 focus-visible:outline-none w-full py-2 pr-2 text-base lg:text-lg placeholder:text-foreground font-normal"
+                            placeholder="Message"
+                            name="message"
+                        />
+
+                        <button type="submit" className="bg-foreground text-background p-5 rounded-4xl w-40">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}

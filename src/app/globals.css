@@ -7,6 +7,10 @@
   --blue: #0067B1;
 }
 
+@theme {
+  --color-accent: #0067B1;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
