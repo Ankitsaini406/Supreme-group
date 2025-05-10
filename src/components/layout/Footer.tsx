@@ -44,7 +44,9 @@ export default function Footer() {
                 </div>
 
                 <div className="flex flex-col gap-6 md:flex-row justify-between mt-12">
-                    <span className="xl:text-base text-sm text-black block whitespace-nowrap opacity-70 hover:opacity-100 focus:outline-none decoration-from-font underline-offset-4 focus:opacity-100">2023.All Rights Reserved.</span>
+                    <span className="xl:text-base text-sm text-black block whitespace-nowrap opacity-70 hover:opacity-100 focus:outline-none decoration-from-font underline-offset-4 focus:opacity-100">
+                        ©{new Date().getFullYear()}. All Rights Reserved.
+                    </span>
                     <span className="xl:text-base text-sm text-black block opacity-70 hover:opacity-100 focus:outline-none decoration-from-font underline-offset-4 focus:opacity-100">Supreme house: 100, 16th Road, Chembur, Mumbai - 400071.</span>
                 </div>
             </div>
