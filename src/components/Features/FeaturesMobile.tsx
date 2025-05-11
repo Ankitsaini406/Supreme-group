@@ -43,18 +43,18 @@ const VideoSection = ({ title, subtitle, videos }: { title: string; subtitle: st
         // return () => video.removeEventListener("timeupdate", handleTimeUpdate);
     }, [currentVideo]);
 
-    const togglePlay = () => {
-        const video = videoRef.current;
-        if (!video) return;
+    // const togglePlay = () => {
+    //     const video = videoRef.current;
+    //     if (!video) return;
 
-        if (video.paused) {
-            video.play();
-            // setIsPlaying(true);
-        } else {
-            video.pause();
-            // setIsPlaying(false);
-        }
-    };
+    //     if (video.paused) {
+    //         video.play();
+    //         setIsPlaying(true);
+    //     } else {
+    //         video.pause();
+    //         setIsPlaying(false);
+    //     }
+    // };
 
     return (
         <motion.div
