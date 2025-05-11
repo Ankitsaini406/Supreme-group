@@ -26,7 +26,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 5px !important;
   height: 8px;
 }
 
@@ -36,10 +36,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  padding: 0px;
-  margin: 0px;
   background: var(--background);
-  border-radius: 0px;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -48,6 +46,7 @@
 
 ::-webkit-scrollbar-track {
   background-color: #ffffff;
+  border-radius: 10px;
 }
 
 * {
