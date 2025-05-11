@@ -1,5 +1,5 @@
 import ContactUs from "@/components/Conteact";
-import Features from "@/components/Features";
+import Features from "@/components/Features/Features";
 import Hero from "@/components/Hero";
 
 
