@@ -31,11 +31,7 @@ export default function Header() {
     }, [lastScrollTop, menuOpen]);
 
     useEffect(() => {
-        if (menuOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
+        document.body.style.overflow = menuOpen ? 'hidden' : '';
     }, [menuOpen]);
 
     const toggleMenu = () => setMenuOpen(prev => !prev);
@@ -66,13 +62,13 @@ export default function Header() {
                             <Link href="#" className="hover:underline"><BsTranslate /></Link>
                         </nav>
 
+                        {/* Mobile Menu */}
                         <div className="md:hidden z-50">
                             <button onClick={toggleMenu}>
                                 {menuOpen ? <HiX size={28} /> : <HiOutlineMenu size={28} />}
                             </button>
                         </div>
 
-                        {/* Mobile Menu */}
                         <AnimatePresence>
                             {menuOpen && (
                                 <>
