@@ -20,8 +20,8 @@ const commercialVideos = [
 const VideoSection = ({ title, subtitle, videos }: { title: string; subtitle: string; videos: { id: string; label: string; video: string }[] }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [activeVideoId, setActiveVideoId] = useState(videos[0].id);
-    const [progress, setProgress] = useState(0);
-    const [isPlaying, setIsPlaying] = useState(true);
+    // const [progress, setProgress] = useState(0);
+    // const [isPlaying, setIsPlaying] = useState(true);
 
     const currentVideo = videos.find(v => v.id === activeVideoId);
 
@@ -33,14 +33,14 @@ const VideoSection = ({ title, subtitle, videos }: { title: string; subtitle: st
         video.currentTime = 0;
         video.load();
         video.play().catch(() => { });
-        setIsPlaying(true);
+        // setIsPlaying(true);
 
-        const handleTimeUpdate = () => {
-            setProgress(video.currentTime / video.duration || 0);
-        };
+        // const handleTimeUpdate = () => {
+        //     setProgress(video.currentTime / video.duration || 0);
+        // };
 
-        video.addEventListener("timeupdate", handleTimeUpdate);
-        return () => video.removeEventListener("timeupdate", handleTimeUpdate);
+        // video.addEventListener("timeupdate", handleTimeUpdate);
+        // return () => video.removeEventListener("timeupdate", handleTimeUpdate);
     }, [currentVideo]);
 
     const togglePlay = () => {
@@ -49,10 +49,10 @@ const VideoSection = ({ title, subtitle, videos }: { title: string; subtitle: st
 
         if (video.paused) {
             video.play();
-            setIsPlaying(true);
+            // setIsPlaying(true);
         } else {
             video.pause();
-            setIsPlaying(false);
+            // setIsPlaying(false);
         }
     };
 
