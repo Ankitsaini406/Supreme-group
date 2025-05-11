@@ -57,7 +57,7 @@ export default function Features() {
 
         videoElement.addEventListener("timeupdate", updateProgress);
         return () => videoElement.removeEventListener("timeupdate", updateProgress);
-    }, [currentVideo?.video]);
+    }, []);
 
     // Scroll-based video activation logic
     useEffect(() => {
