@@ -40,7 +40,6 @@ export default function Features() {
     });
     const y = useTransform(scrollYProgress, [0, 1], ["0vh", "5vh"]);
 
-    // Sync video playback when active video changes
     useEffect(() => {
         const videoElement = videoRef.current;
         if (!videoElement || !currentVideo) return;
@@ -57,7 +56,8 @@ export default function Features() {
 
         videoElement.addEventListener("timeupdate", updateProgress);
         return () => videoElement.removeEventListener("timeupdate", updateProgress);
-    }, [currentVideo?.video]);
+    }, [currentVideo]);
+
 
     // Scroll-based video activation logic
     useEffect(() => {
@@ -136,12 +136,12 @@ export default function Features() {
                 className="sticky top-20 flex flex-col gap-20 items-center justify-center"
             >
                 {/* Title */}
-                    <motion.h2 ref={headingRef} style={{ y }}
-                        className="z-10 leading-snug text-2xl md:text-4xl text-foreground font-light text-center"
-                    >
-                        Evolving the drive with <strong>360-degree</strong><br />
-                        comprehensive solutions
-                    </motion.h2>
+                <motion.h2 ref={headingRef} style={{ y }}
+                    className="z-10 leading-snug text-2xl md:text-4xl text-foreground font-light text-center"
+                >
+                    Evolving the drive with <strong>360-degree</strong><br />
+                    comprehensive solutions
+                </motion.h2>
 
                 {/* Content Section */}
                 <motion.div
