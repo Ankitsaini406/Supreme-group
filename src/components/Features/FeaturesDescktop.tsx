@@ -19,6 +19,8 @@ const commercialVideos = [
     { id: "commercial-cabin", label: "Cabin", src: "/car/commercial-cabin.svg", video: "/commercial-cabin.mp4" },
 ];
 
+type VehicleType = "passenger" | "commercial";
+
 export default function Features() {
     const sectionRef = useRef<HTMLDivElement>(null);
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -29,7 +31,7 @@ export default function Features() {
 
     const [isPlaying, setIsPlaying] = useState(true);
     const [progress, setProgress] = useState(0);
-    const [activeVehicleType, setActiveVehicleType] = useState<"passenger" | "commercial">("passenger");
+    const [activeVehicleType, setActiveVehicleType] = useState<VehicleType>("passenger");
     const [activeVideoId, setActiveVideoId] = useState(passengerVideos[0].id);
 
     const videos = activeVehicleType === "passenger" ? passengerVideos : commercialVideos;
@@ -160,7 +162,7 @@ export default function Features() {
                                 key={type}
                                 type="button"
                                 onClick={() => {
-                                    setActiveVehicleType(type as any);
+                                    setActiveVehicleType(type as VehicleType);
                                     const firstVideo = type === "passenger" ? passengerVideos[0].id : commercialVideos[0].id;
                                     setActiveVideoId(firstVideo);
                                     scrollToVideo(firstVideo);
