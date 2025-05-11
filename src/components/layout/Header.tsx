@@ -4,27 +4,41 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaLinkedinIn } from "react-icons/fa6";
+import { BsTranslate } from "react-icons/bs";
+import { HiOutlineMenu, HiX } from "react-icons/hi";
 
 export default function Header() {
     const [hideHeader, setHideHeader] = useState(false);
     const [lastScrollTop, setLastScrollTop] = useState(0);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            if (menuOpen) return;
 
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
             if (scrollTop > lastScrollTop && scrollTop > 10) {
                 setHideHeader(true);
             } else {
                 setHideHeader(false);
             }
-
             setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop);
         };
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [lastScrollTop]);
+    }, [lastScrollTop, menuOpen]);
+
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }, [menuOpen]);
+
+    const toggleMenu = () => setMenuOpen(prev => !prev);
 
     return (
         <AnimatePresence>
@@ -36,17 +50,58 @@ export default function Header() {
                     transition={{ duration: 0.3 }}
                     className="fixed top-0 left-0 w-full bg-foreground text-background p-3 shadow-md z-50"
                 >
-                    <header className="flex justify-between items-center container mx-auto">
+                    <header className="flex justify-between items-center container mx-auto relative">
                         <div className='relative h-12 w-[150px]'>
                             <Link href='/'>
-                            <Image src='/logo.svg' alt='Logo' fill loading='eager' className='h-full cursor-pointer' />
+                                <Image src='/logo.svg' alt='Logo' fill loading='eager' className='h-full cursor-pointer' />
                             </Link>
                         </div>
-                        <nav className="space-x-4">
-                            <a href="#" className="hover:underline">Home</a>
-                            <a href="#" className="hover:underline">About</a>
-                            <a href="#" className="hover:underline">Contact</a>
+
+                        {/* Desktop nav */}
+                        <nav className="hidden md:flex items-center gap-6">
+                            <Link href='#'>
+                                <button className='bg-[#5CD6FF] border border-[#5CD6FF] text-background px-4 py-2 rounded-4xl cursor-pointer hover:bg-foreground duration-300'>Contact Us</button>
+                            </Link>
+                            <Link href="#" className="hover:underline"><FaLinkedinIn /></Link>
+                            <Link href="#" className="hover:underline"><BsTranslate /></Link>
                         </nav>
+
+                        <div className="md:hidden z-50">
+                            <button onClick={toggleMenu}>
+                                {menuOpen ? <HiX size={28} /> : <HiOutlineMenu size={28} />}
+                            </button>
+                        </div>
+
+                        {/* Mobile Menu */}
+                        <AnimatePresence>
+                            {menuOpen && (
+                                <>
+                                    <motion.div
+                                        className="fixed inset-0 bg-background/90 z-30 md:hidden"
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        onClick={toggleMenu}
+                                    />
+
+                                    <motion.nav
+                                        initial={{ x: '100%' }}
+                                        animate={{ x: 0 }}
+                                        exit={{ x: '100%' }}
+                                        transition={{ duration: 0.3 }}
+                                        className="fixed top-0 right-0 h-screen w-80 bg-foreground text-background px-6 pt-20 flex flex-col items-center gap-6 md:hidden z-40"
+                                    >
+                                        <Link href='#' onClick={toggleMenu}>
+                                            <button className='bg-[#5CD6FF] border border-[#5CD6FF] text-background px-4 py-2 rounded-4xl w-full hover:bg-foreground duration-300'>
+                                                Contact Us
+                                            </button>
+                                        </Link>
+                                        <Link href="#" className="hover:underline" onClick={toggleMenu}><FaLinkedinIn /></Link>
+                                        <Link href="#" className="hover:underline" onClick={toggleMenu}><BsTranslate /></Link>
+                                    </motion.nav>
+                                </>
+                            )}
+                        </AnimatePresence>
                     </header>
                 </motion.div>
             )}
