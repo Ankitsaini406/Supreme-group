@@ -56,10 +56,10 @@ export default function Header() {
                         {/* Desktop nav */}
                         <nav className="hidden md:flex items-center gap-6">
                             <Link href='#'>
-                                <button className='bg-[#5CD6FF] border border-[#5CD6FF] text-background px-4 py-2 rounded-4xl cursor-pointer hover:bg-background hover:text-foreground duration-300'>Contact Us</button>
+                                <button className='bg-[#5CD6FF] border border-[#02b8f4] text-foreground px-4 py-2 rounded-4xl cursor-pointer hover:bg-background hover:text-foreground duration-300'>Contact Us</button>
                             </Link>
-                            <Link href="#" className="hover:underline"><FaLinkedinIn /></Link>
-                            <Link href="#" className="hover:underline"><BsTranslate /></Link>
+                            <Link href="#"><FaLinkedinIn /></Link>
+                            <Link href="#" className="flex gap-2"><BsTranslate /> <span className='text-[12px]'>ENG</span></Link>
                         </nav>
 
                         {/* Mobile Menu */}
@@ -92,8 +92,8 @@ export default function Header() {
                                                 Contact Us
                                             </button>
                                         </Link>
-                                        <Link href="#" className="hover:underline" onClick={toggleMenu}><FaLinkedinIn /></Link>
-                                        <Link href="#" className="hover:underline" onClick={toggleMenu}><BsTranslate /></Link>
+                                        <Link href="#" onClick={toggleMenu}><FaLinkedinIn /></Link>
+                                        <Link href="#" className="flex gap-2"><BsTranslate /> <span className='text-[12px]'>ENG</span></Link>
                                     </motion.nav>
                                 </>
                             )}

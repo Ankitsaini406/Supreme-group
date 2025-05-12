@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <footer className="bg-background text-foreground p-4 md:p-12">
-            <div className="container mx-auto">
+            <div className="w-full max-w-7xl mx-auto">
                 <div className="relative h-12 w-[150px] cursor-pointer">
                     <Image src='/logo.svg' alt="Commpeny Logo" fill loading='lazy' />
                 </div>
