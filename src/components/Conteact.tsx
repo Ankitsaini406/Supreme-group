@@ -56,7 +56,7 @@ export default function ContactUs() {
                             name="message"
                         />
 
-                        <button type="submit" className="bg-background text-foreground py-2 px-10 rounded-4xl border border-accent hover:bg-accent hover:border-background hover:text-background duration-500 cursor-pointer">Send</button>
+                        <button type="submit" className="bg-background text-foreground py-2 px-10 rounded-4xl border border-[#02b8f4] hover:bg-accent hover:border-[#02b8f4] hover:text-background duration-500 cursor-pointer">Send</button>
                     </div>
                 </div>
             </div>

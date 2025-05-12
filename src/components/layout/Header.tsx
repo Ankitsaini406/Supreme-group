@@ -88,7 +88,7 @@ export default function Header() {
                                         className="fixed top-0 right-0 h-screen w-80 bg-background text-foreground px-6 pt-20 flex flex-col items-center gap-6 md:hidden z-40"
                                     >
                                         <Link href='#' onClick={toggleMenu}>
-                                            <button className='bg-[#5CD6FF] border border-[#5CD6FF] text-background px-4 py-2 rounded-4xl w-full hover:bg-foreground duration-300'>
+                                            <button className='bg-[#5CD6FF] border border-[#02b8f4] text-background px-4 py-2 rounded-4xl w-full hover:bg-foreground duration-300'>
                                                 Contact Us
                                             </button>
                                         </Link>
