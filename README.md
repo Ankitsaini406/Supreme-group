@@ -1,15 +1,20 @@
-🚗 Supreme Group - Commercial & Passenger Vehicle Showcase
-Live Demo: https://supreme-group-wine.vercel.app/
+# 🚗 Supreme Group - Commercial & Passenger Vehicle Showcase
 
-This is a modern Next.js application designed to showcase Supreme Group's commercial and passenger vehicle offerings through an engaging UI and dynamic video content.
+**Live Demo**: [https://supreme-group-wine.vercel.app/](https://supreme-group-wine.vercel.app/)
 
-📦 Tech Stack
-Framework: Next.js 14
+## 📌 Project Overview
 
-Styling: Tailwind CSS
+This project features:
 
-Animation: Framer Motion
+- A split video showcase for **Commercial** and **Passenger** vehicles.
+- Mobile-optimized layout with simplified column structure.
+- Scroll-triggered entrance animations using **Framer Motion**.
 
-Font Optimization: next/font with Geist
+## 📦 Tech Stack
 
-Deployment: Vercel
+- **Framework**: Next.js 14 (App Router & Server Components)
+- **Styling**: Tailwind CSS (Utility-first styling with responsive design)
+- **Animation**: Framer Motion (Page transitions & scroll-based animations)
+- **Deployment**: Vercel (CI/CD integrated, edge-optimized)
+
+## 🧩 Folder Structure (Simplified)
