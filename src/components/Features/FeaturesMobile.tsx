@@ -64,7 +64,7 @@ const VideoSection = ({ title, subtitle, videos }: { title: string; subtitle: st
             className="w-full max-w-4xl mx-auto px-4 py-10"
         >
             <h2 className="text-xl md:text-3xl text-center font-semibold mb-2 text-accent">{title}</h2>
-            <h6 className="font-light text-center mb-6">{subtitle}</h6>
+            <h6 className="font-light text-background text-center mb-6">{subtitle}</h6>
 
             <div className="relative flex justify-center items-center">
                 <video
