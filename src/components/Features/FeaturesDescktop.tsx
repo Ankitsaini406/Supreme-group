@@ -139,7 +139,7 @@ export default function Features() {
             >
                 {/* Title */}
                 <motion.h2 ref={headingRef} style={{ y }}
-                    className="z-10 leading-snug text-2xl md:text-4xl text-foreground font-light text-center"
+                    className="z-10 leading-snug text-2xl md:text-4xl text-background font-light text-center"
                 >
                     Evolving the drive with <strong>360-degree</strong><br />
                     comprehensive solutions
@@ -169,14 +169,14 @@ export default function Features() {
                                 }}
                                 className={`transition-opacity duration-300 text-left cursor-pointer ${activeVehicleType === type ? "opacity-100" : "opacity-20"} ${type === 'commercial' ? "mt-12" : "mt-4"}`}
                             >
-                                <h5 className="font-medium pb-2 2xl:text-2xl">{label}</h5>
-                                <h6 className="font-light">{subtext}</h6>
+                                <h5 className="font-medium pb-2 2xl:text-2xl text-background">{label}</h5>
+                                <h6 className="font-light text-background">{subtext}</h6>
                             </button>
                         ))}
 
                         {/* Active Bar */}
                         <div className="absolute left-0 h-full w-1 rounded-md bg-gray-50/20 top-0">
-                            <div className={`h-[50%] w-1 bg-foreground rounded-md ${activeVehicleType === "commercial" ? "translate-y-full" : "translate-y-0"} transition-transform duration-500`} />
+                            <div className={`h-[50%] w-1 bg-background rounded-md ${activeVehicleType === "commercial" ? "translate-y-full" : "translate-y-0"} transition-transform duration-500`} />
                         </div>
                     </div>
 
@@ -217,7 +217,7 @@ export default function Features() {
                                 <div className="relative w-20 aspect-square">
                                     <Image src={video.src} alt={video.label} fill />
                                 </div>
-                                <span>{video.label}</span>
+                                <span className="text-background">{video.label}</span>
                             </button>
                         </div>
                     ))}
@@ -243,7 +243,7 @@ export default function Features() {
                                 />
                             </svg>
                             <button onClick={toggleVideoPlayback} className="relative p-3 2xl:p-4 rounded-full z-10 cursor-pointer">
-                                {isPlaying ? <span className="text-sm">❚❚</span> : <span className="text-sm">▶</span>}
+                                {isPlaying ? <span className="text-sm text-background">❚❚</span> : <span className="text-sm text-background">▶</span>}
                             </button>
                         </div>
                     </div>

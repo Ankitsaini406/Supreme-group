@@ -103,7 +103,7 @@ const VideoSection = ({ title, subtitle, videos }: { title: string; subtitle: st
 export default function Features() {
     return (
         <div className="bg-black py-20">
-            <h2 className="z-10 leading-snug text-2xl md:text-4xl text-foreground font-light text-center">
+            <h2 className="z-10 leading-snug text-2xl md:text-4xl text-background font-light text-center">
                 Evolving the drive with <strong>360-degree</strong><br />
                 comprehensive solutions
             </h2>

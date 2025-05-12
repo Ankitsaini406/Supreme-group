@@ -44,7 +44,7 @@ export default function Header() {
                     animate={{ y: 0 }}
                     exit={{ y: -100 }}
                     transition={{ duration: 0.3 }}
-                    className="fixed top-0 left-0 w-full bg-foreground text-background p-3 shadow-md z-50"
+                    className="fixed top-0 left-0 w-full bg-background text-foreground p-3 shadow-md z-50"
                 >
                     <header className="flex justify-between items-center container mx-auto relative">
                         <div className='relative h-12 w-[150px]'>
@@ -56,7 +56,7 @@ export default function Header() {
                         {/* Desktop nav */}
                         <nav className="hidden md:flex items-center gap-6">
                             <Link href='#'>
-                                <button className='bg-[#5CD6FF] border border-[#5CD6FF] text-background px-4 py-2 rounded-4xl cursor-pointer hover:bg-foreground duration-300'>Contact Us</button>
+                                <button className='bg-[#5CD6FF] border border-[#5CD6FF] text-background px-4 py-2 rounded-4xl cursor-pointer hover:bg-background hover:text-foreground duration-300'>Contact Us</button>
                             </Link>
                             <Link href="#" className="hover:underline"><FaLinkedinIn /></Link>
                             <Link href="#" className="hover:underline"><BsTranslate /></Link>
@@ -73,7 +73,7 @@ export default function Header() {
                             {menuOpen && (
                                 <>
                                     <motion.div
-                                        className="fixed inset-0 bg-background/90 z-30 md:hidden"
+                                        className="fixed inset-0 bg-foreground/90 z-30 md:hidden"
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         exit={{ opacity: 0 }}
@@ -85,7 +85,7 @@ export default function Header() {
                                         animate={{ x: 0 }}
                                         exit={{ x: '100%' }}
                                         transition={{ duration: 0.3 }}
-                                        className="fixed top-0 right-0 h-screen w-80 bg-foreground text-background px-6 pt-20 flex flex-col items-center gap-6 md:hidden z-40"
+                                        className="fixed top-0 right-0 h-screen w-80 bg-background text-foreground px-6 pt-20 flex flex-col items-center gap-6 md:hidden z-40"
                                     >
                                         <Link href='#' onClick={toggleMenu}>
                                             <button className='bg-[#5CD6FF] border border-[#5CD6FF] text-background px-4 py-2 rounded-4xl w-full hover:bg-foreground duration-300'>
