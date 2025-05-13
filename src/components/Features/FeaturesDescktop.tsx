@@ -135,11 +135,11 @@ export default function Features() {
         >
             <motion.div
                 ref={stickyRef}
-                className="sticky top-20 flex flex-col gap-20 items-center justify-center"
+                className="sticky top-20 flex flex-col gap-20 items-center justify-between h-[80vh]"
             >
                 {/* Title */}
                 <motion.h2 ref={headingRef} style={{ y }}
-                    className="z-10 leading-snug text-2xl md:text-4xl text-background font-light text-center"
+                    className="z-10 leading-snug text-2xl md:text-4xl 2xl:text-5xl text-background font-light text-center"
                 >
                     Evolving the drive with <strong>360-degree</strong><br />
                     comprehensive solutions
@@ -169,8 +169,8 @@ export default function Features() {
                                 }}
                                 className={`transition-opacity duration-300 text-left cursor-pointer ${activeVehicleType === type ? "opacity-100" : "opacity-20"} ${type === 'commercial' ? "mt-12" : "mt-4"}`}
                             >
-                                <h5 className="font-medium pb-2 2xl:text-2xl text-background">{label}</h5>
-                                <h6 className="font-light text-background">{subtext}</h6>
+                                <h5 className="font-medium pb-2 lg:text-xl xl:text-2xl 2xl:text-3xl text-background">{label}</h5>
+                                <h6 className="font-light lg:text-xs xl:text-lg 2xl:text-xl text-background">{subtext}</h6>
                             </button>
                         ))}
 
@@ -181,14 +181,14 @@ export default function Features() {
                     </div>
 
                     {/* Video Player */}
-                    <div className="relative flex items-center justify-center w-full grow h-[40vh] overflow-hidden scale-y-105">
+                    <div className="relative flex items-center justify-center w-full grow scale-y-105">
                         <motion.video
                             key={currentVideo?.video}
                             ref={videoRef}
                             initial={{ opacity: 0, scale: 0.8, y: 100 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            className="absolute w-auto max-h-96 min-h-56 2xl:h-[40vh] object-cover"
+                            className="absolute w-auto max-h-96 min-h-56 object-cover"
                             autoPlay
                             muted
                             playsInline
